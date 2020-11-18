@@ -1,0 +1,32 @@
+<div id="custom-toolbar" style="text-align:right;margin-bottom: 10px;">
+	<button type="button" name='add' class="btn btn-sm btn-info">Add New User</button>
+</div>
+
+<table class="table table-dark">
+  <thead>
+	<tr>
+		<th></th>
+		<th>#</th>
+		<th>Name</th>
+		<th>Email</th>
+		<th>TracSENSE</th>
+		<th>AVL</th>
+	</tr>
+  </thead>
+  <tbody>
+	<% rows.forEach(function(row){ %>
+	<tr>
+		<td><button type='button' name='edit' class='btn btn-light btn-sm' data-id="<%= row.$loki %>">edit</button></td>
+		<td><%= row.$loki %></td>
+		<td><%= row.name %></td>
+		<td><%= row.email %></td>
+		<td><%= row.tracsense_access %></td>
+		<td><%= row.avl_access %></td>
+	</tr>
+	<% }); %>
+  </tbody>
+</table>
+
+<script>
+	app.initTable();
+</script>

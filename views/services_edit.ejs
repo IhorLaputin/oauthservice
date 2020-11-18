@@ -1,0 +1,44 @@
+<div id="custom-toolbar" style="text-align:left;margin-bottom: 10px;">
+	<button type="button" name='back' class="btn btn-sm btn-info">Back to List</button>
+</div>
+
+<div style="background-color: rgb(245,245,245);padding: 20px;">
+
+	<form id='editForm'>
+	  
+	  <div class="form-group row">
+		<label class="col-sm-2 control-label">Id</label>
+		<div class="col-sm-10">
+		  <input type="text" readonly class="form-control" name="_id" value="">
+	    </div>
+	  </div>
+	  
+		<div class="form-group row">
+			<label class="col-sm-2 control-label">Service ID</label>
+			<div class="col-sm-10"><input type="text" class="form-control" name="name" value="" required></div>
+		</div> 	
+		<div class="form-group row">
+			<label class="col-sm-2 control-label">Web Site</label>
+			<div class="col-sm-10"><input type="text" class="form-control" name="url" value="" required></div>
+		</div> 	
+		<div class="form-group row">
+			<label class="col-sm-2 control-label">Callback Url</label>
+			<div class="col-sm-10"><input type="text" class="form-control" name="callback" value="" required></div>
+		</div> 	
+	
+	</form>
+	  
+	  <div class="row">
+		<div class="col-sm-offset-2 col-sm-10">
+		  <p class="bg-success" id='ajax-msg'></p>
+		  <button name="save" type="save" class="btn btn-primary">Save</button>
+		  <button name="delete" type="delete" class="btn btn-danger">Delete</button>
+		</div>
+	  </div>
+	  
+</div>	  
+
+<script>
+	var item = <%- item %>;
+	app.initForm();
+</script>
